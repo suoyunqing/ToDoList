@@ -5,6 +5,7 @@ export struct ToDoListItem {
 
     build() {
         Row() {
+          Image($r('app.media.default_icon')).width(15);
           Text(this.content)
         }
     }
