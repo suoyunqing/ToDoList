@@ -1,11 +1,11 @@
 @Component
 export struct ToDoListItem {
 
-  @State message: string = '';
+  private  content: string = '';
 
     build() {
         Row() {
-          Text(this.message)
+          Text(this.content)
         }
     }
 }
