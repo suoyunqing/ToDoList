@@ -17,14 +17,20 @@ struct Index {
         ToDoListItem({ content: item })
       }, (item: string) => JSON.stringify(item))
 
-      Column(){
-        TextInput({placeholder:'添加代办事项'}).onChange((value: string) => {
+      Row({space: 2}){
+        TextInput({placeholder:'添加代办事项'})
+          .width('70%').onChange((value: string) => {
           this.toBeAddedItem = value;
         })
-        Button('新增').onClick(() => {
+        Button('新增')
+          .width('25%')
+          .align(Alignment.End)
+          .onClick(() => {
           this.toDoList.push(this.toBeAddedItem);
         })
       }
+
+
     }
   }
 }
