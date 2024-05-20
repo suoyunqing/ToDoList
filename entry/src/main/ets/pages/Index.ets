@@ -1,3 +1,4 @@
+import hilog from '@ohos.hilog';
 import {ToDoListItem}  from "./component/ToDoListItem"
 
 @Entry
@@ -14,7 +15,7 @@ struct Index {
       }
 
       ForEach(this.toDoList, (item: string) => {
-        ToDoListItem({ content: item })
+        ToDoListItem({ content: item, toDoList: $toDoList })
       }, (item: string) => JSON.stringify(item))
 
       Row({space: 2}){
@@ -34,3 +35,5 @@ struct Index {
     }
   }
 }
+
+
